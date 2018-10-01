@@ -1,64 +1,19 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Racks</ion-title>
+  <ion-navbar color="principal">
+    <ion-title text-center>Thyms Racks</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
+  <ion-list *ngFor="let empacador of empacadores">
     <ion-item>
       <ion-thumbnail item-start>
         <img src="../../assets/imgs/rack.png">
       </ion-thumbnail>
-      <h2>Rack 1</h2>
-      <p>Usuario Nombre</p>
-      <p>4 Facturas</p>
+      <h2>{{empacador.rack}}</h2>
+      <p>{{empacador.nombre}}</p>
+      <p>{{empacador.facturas}} Facturas</p>
       <button ion-button clear item-end (click)="viewFactura()">Ver</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/rack.png">
-      </ion-thumbnail>
-      <h2>Rack 2</h2>
-      <p>Usuario Nombre</p>
-      <p>4 Facturas</p>
-      <button ion-button clear item-end>Ver</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/rack.png">
-      </ion-thumbnail>
-      <h2>Rack 3</h2>
-      <p>Usuario Nombre</p>
-      <p>4 Facturas</p>
-      <button ion-button clear item-end>Ver</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/rack.png">
-      </ion-thumbnail>
-      <h2>Rack 4</h2>
-      <p>Usuario Nombre</p>
-      <p>4 Facturas</p>
-      <button ion-button clear item-end>Ver</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/rack.png">
-      </ion-thumbnail>
-      <h2>Rack 5</h2>
-      <p>Usuario Nombre</p>
-      <p>4 Facturas</p>
-      <button ion-button clear item-end>Ver</button>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/rack.png">
-      </ion-thumbnail>
-      <h2>Rack 6</h2>
-      <p>Usuario Nombre</p>
-      <p>4 Facturas</p>
-      <button ion-button clear item-end>Ver</button>
     </ion-item>
   </ion-list>
 </ion-content>
